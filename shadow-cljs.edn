@@ -1,4 +1,6 @@
 {:builds       {:app {:main      zprint-node.main/main,
+                      :release {:compiler-options
+                                {:closure-defines {"goog.DEBUG" false}}},
                       :output-to "target/main.js",
                       :target    :node-script}},
  :dependencies [[zprint "0.4.11"]],
