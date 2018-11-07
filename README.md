@@ -15,8 +15,9 @@ Usage: zprint-node [options]
 
 Options:
   -V, --version        output the version number
-  -i, --input <path>   input file
-  -o, --output <path>  output file
+  -i, --input <path>   input file (.cljs, .clj, .cljc)
+  -o, --output <path>  output file (.cljs, .clj, .cljc)
+  -c, --config <path>  config file (edn file)
   -h, --help           output usage information
 ```
 
@@ -24,7 +25,16 @@ Options:
 
 To learn how to create a `.zprintrc` see the [zprint documentation](https://github.com/kkinnear/zprint#introduction-to-configuration)
 
-The `.zprintrc` must be in the root path of your project
+## Editor integration
+
+### Emacs
+
+```emacs-lisp
+(defun zprint-this ()
+  (interactive)
+  (basic-save-buffer)
+  (shell-command (concat "zprint-node -i " buffer-file-name " -o " buffer-file-name " -c " (projectile-project-root) ".zprintrc")))
+```
 
 ## Thanks
 
