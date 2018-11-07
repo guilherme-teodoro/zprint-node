@@ -12,7 +12,6 @@
 (defn get-options
   [config-path]
   (let [project-path (path/resolve cwd ".zprintrc")]
-    (prn config-path)
     (cond (fs/existsSync config-path)  (-> config-path
                                            (fs/readFileSync "utf8")
                                            (reader/read-string))
