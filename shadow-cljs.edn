@@ -1,0 +1,5 @@
+{:builds       {:app {:main      zprint-node.main/main,
+                      :output-to "target/main.js",
+                      :target    :node-script}},
+ :dependencies [[zprint "0.4.11"]],
+ :source-paths ["src"]}

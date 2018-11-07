@@ -1,0 +1,23 @@
+{
+    "name": "zprint-node",
+    "version": "0.1.0",
+    "description": "",
+    "main": "target/main.js",
+    "bin": {
+        "zprint-node": "target/main.js"
+    },
+    "scripts": {
+        "watch": "shadow-cljs watch app",
+        "compile": "shadow-cljs compile app",
+        "build": "shadow-cljs release app"
+    },
+    "keywords": [],
+    "author": "Guilherme Teodoro",
+    "license": "MIT",
+    "devDependencies": {
+        "shadow-cljs": "^2.6.23"
+    },
+    "dependencies": {
+        "commander": "^2.19.0"
+    }
+}
